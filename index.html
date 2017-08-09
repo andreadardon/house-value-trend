@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Web design and development">
+      <title>House Value Trend</title>
+      <!-- <link rel="shortcut icon" type="image/ico" href="favicon.ico" /> -->
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="style.css">
+
+      <!-- jQuery library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+      <!-- C3 and D3 -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.0/d3.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.js"></script>
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.css">
+      <!-- Latest compiled JavaScript -->
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+      <script src="https://use.fontawesome.com/641ca369c7.js"></script>
+      <!-- Production Google API Key -->
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCZqlq07OVzu5eg8-JMCQUZMZyj8pDyZk&libraries=places"></script>
+      <!-- Development Google API Key -->
+      <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsYtvG6_ofyxHc3QTzfwl_PVXtwh4JJ6c&libraries=places"></script> -->
+    </head>
+    <body>
+
+      <div class="container-fluid" id="background-map">
+        <div class="row title-row">
+          <div class="col-md-12 text-center">
+            <h1 class="page-title">House Value Trend <br /> for any Address in the USA</h1>
+          </div>
+
+          <div class="row vertical-row-padding">
+            <div class="col-md-6 col-md-offset-3 text-center">
+                <br />
+              <input type="text" class="form-control" placeholder="Type in your Address" id="input">
+            </div>
+          </div>
+        </div>
+
+        <div class="row results-row vertical-row-padding text-center" id="output">
+          <div id="spinner" class="col-sm-12">
+            <img width=50 src='rolling.svg'/>
+          </div>
+          <div class="col-sm-6 col-md-4 col-md-offset-2 col-print-8">
+            <div id="chart"></div>
+          </div>
+          <div class="col-sm-3 col-sm-offset-1 col-print-4">
+            <div id="table">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Year</th>
+                    <th>% Change</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>'90 - '95</td>
+                    <td id="90to95">12345</td>
+                  </tr>
+                  <tr>
+                    <td>'95 - '00</td>
+                    <td id="95to00">12345</td>
+                  </tr>
+                  <tr>
+                    <td>'00 - '05</td>
+                    <td id="00to05">12345</td>
+                  </tr>
+                  <tr>
+                    <td>'05 - '10</td>
+                    <td id="05to10">12345</td>
+                  </tr>
+                  <tr>
+                    <td>'10 - '15</td>
+                    <td id="10to15">12345</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            <button id="printReport" class="btn btn-estimate hidden-print">Print</button>
+          </div>
+        </div>
+
+        <div class="row last-row">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <p class="description">
+              This estimation is produced using data from the <a href="https://www.census.gov/">US Census Bureau</a>. However, this website is not endorsed by the US Census Bureau.
+              <br/>
+              <br class="br"/>
+              This microsite is produced by <a href="http://realsmart.io">Realsmart</a>, a leader in location intelligence.
+              <br/>
+              <br class="br"/>
+              Yes! We can help with bulk location intelligence processing.  Contact us at <a href="http://realsmart.io/">realsmart.io</a>.
+              <br/>
+              <br class="br"/>
+              For other examples of our work, check out <a href="http://cartoscope.io/">cartoscope.io</a>.
+              <br/>
+              <br class="br"/>
+              Address autocomplete provided by Google.
+            </p>
+            <br />
+          </div>
+        </div>
+      </div>
+
+       <script src="house_value.js"></script>
+       <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-28536861-10', 'auto');
+          ga('send', 'pageview');
+
+        </script>
+
+    </body>
+
+
+
+
+  </html>

@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900');
+
+.title-row {
+  padding-top: 8%;
+  padding-bottom: 5%;
+  background:
+  linear-gradient(
+     rgba(0, 0, 0, 0.5),
+     rgba(0, 0, 0, 0.5)
+   ),
+    url(houses.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+}
+
+.vertical-row-padding {
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.last-row {
+  padding-top: 5%;
+  padding-bottom: 2%;
+}
+
+.page-title {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  color: #fff;
+}
+
+.estimate-number {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 60px;
+  color: #fff;
+}
+
+.subtitle {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  color: #fff;
+}
+
+.form-control  {
+  border-radius: 0px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  height: 44px;
+}
+
+
+.description {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  color: #2a2a2a;
+}
+
+.description a {
+  color: #EA4845;
+}
+
+.table>thead>tr>th {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    background-color: #EA4845 !important;
+    color: #fff !important;
+    -webkit-print-color-adjust: exact;
+}
+
+.table>tbody>tr>td {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #2a2a2a !important;
+}
+
+.results-row {
+  background-color: #fff;
+}
+
+.btn-estimate {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  text-transform: uppercase;
+  background-color: #EA4845;
+  border-color: #EA4845;
+  color: #fff;
+  border-radius: 0px;
+}
+
+.c3-axis-y text {
+   fill: #2a2a2a;
+   font-size:12px;
+   font-family: 'Lato', sans-serif;
+   font-weight: 400;
+}
+.c3-axis-x text {
+    font-size:12px;
+    fill:#2a2a2a;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+
+.c3 .c3-axis-x path, .c3 .c3-axis-x line {
+    stroke: #2a2a2a;
+}
+.c3 .c3-axis-y path, .c3 .c3-axis-y line {
+    stroke: #2a2a2a;
+}
+
+.c3 text {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  fill: #2a2a2a;
+}
+
+@media print {
+  .title-row {
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
+
+  .br {
+    display: none;
+  }
+}
